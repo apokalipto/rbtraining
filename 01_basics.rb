@@ -6,9 +6,6 @@
 module Task1
 
 	def self.palindrome?(input)
-		# YOUR CODE GOES HERE. Right now the method only returns false to fail the test.
-		# You should change it. Run the test before chaning anything to see the result
-	
 		return false
 	end
 	
