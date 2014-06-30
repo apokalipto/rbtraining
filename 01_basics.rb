@@ -12,6 +12,9 @@ module Task1
 		return false
 	end
 	
+	def self.changed
+		puts "Fuck"
+	end
 end
 
 
