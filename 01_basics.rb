@@ -6,7 +6,7 @@
 module Task1
 
 	def self.palindrome?(input)
-		return false
+		input.downcase == input.reverse.downcase
 	end
 	
 end
