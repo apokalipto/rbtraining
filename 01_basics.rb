@@ -9,6 +9,9 @@ module Task1
 		input.downcase == input.reverse.downcase
 	end
 	
+	def self.changed
+		puts "Fuck"
+	end
 end
 
 
