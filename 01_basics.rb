@@ -26,13 +26,27 @@ module MontyHall
 	# * If the result is a "CAR", the program tells the user "YOU WIN!"
 	# * If the result is a "GOAT", the program tells the user "YOU LOOSE!"
 	def self.play(game)
-		# See the documentation for the class Array. (google ruby Array)
-		# Use the method puts to output text
-		# Use the method gets to recive user input
-		# To iterate an array, you may use the method .each 
+		n = game.length
+		puts "ENTER YOUR CHOICE (#{(1..(n+1)).to_a.join(',')}):"
+		choice = gets
+		choice = choice.chomp.to_i
+		
+		random_pick = rand(n)
+		while game[random_pick] == "CAR" || random_pick == choice
+			randmon_pick = rand(n)
+		end
+		puts "Behind door number #{random_pick + 1}: #{game[random_pick]}\nPlease enter your final choice"
+		final_choice = gets
+		final_choice = final_choice.chomp.to_i
+		
+		if game[final_choice] == "CAR"
+			puts "YOU WIN!"
+		else
+			puts "YOU LOOSE"
+		end
 	end
 	
 	
 end
 
-
+MontyHall.play(["GOAT","GOAT","GOAT","CAR"])

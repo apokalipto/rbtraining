@@ -2,7 +2,7 @@ require_relative '01_basics.rb'
 
 descriptions = {
 									:task_1=>"01 - Palindrome Test",
-									:task_2=>"02 - (String) Palindrome Test" 
+									:task_2=>"02 - Monty Hall" 
 							 }
 
 class Test
@@ -20,6 +20,15 @@ class Test
 		end
 		all_good ? ret_text = "OK" : ret_text = "ERROR!!! Something is wrong with the 'palindrome?' implementation. Fix it and try again"
 		return ret_text
+	end
+	
+	def task_2
+		game = []
+		rand(100).times do
+			game << "GOAT"
+		end
+		game[rand(game.size)] = "CAR"
+		MontyHall.play(game)
 	end
 end
 
